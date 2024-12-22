@@ -1,0 +1,12 @@
+services:
+  - type: web
+    name: backend
+    env: docker
+    plan: free
+    dockerfilePath: Dockerfile
+    buildCommand: ./mvnw clean package
+    envVars:
+      - key: MONGODB_URI
+        value: mongodb+srv://<username>:<password>@cluster0.mongodb.net/your_database_name?retryWrites=true&w=majority
+      - key: DATABASE_NAME
+        value: employee-management
