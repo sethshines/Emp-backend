@@ -2,7 +2,7 @@ package com.emp.backend.model;
 import jakarta.persistence.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Document(collection = "Department")
+@Document(collection = "departments")
 public class Department {
     @Id
     String id;
